@@ -1,0 +1,32 @@
+<%= form_for(astro) do |f| %>
+  <% if astro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(astro.errors.count, "error") %> prohibited this astro from being saved:</h2>
+
+      <ul>
+      <% astro.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :punk %>
+    <%= f.text_field :punk %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mango %>
+    <%= f.text_field :mango %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sticker %>
+    <%= f.text_field :sticker %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

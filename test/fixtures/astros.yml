@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  punk: MyString
+  mango: MyString
+  sticker: MyString
+
+two:
+  punk: MyString
+  mango: MyString
+  sticker: MyString

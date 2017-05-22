@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Astros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Punk</th>
+      <th>Mango</th>
+      <th>Sticker</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @astros.each do |astro| %>
+      <tr>
+        <td><%= astro.punk %></td>
+        <td><%= astro.mango %></td>
+        <td><%= astro.sticker %></td>
+        <td><%= link_to 'Show', astro %></td>
+        <td><%= link_to 'Edit', edit_astro_path(astro) %></td>
+        <td><%= link_to 'Destroy', astro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Astro', new_astro_path %>
