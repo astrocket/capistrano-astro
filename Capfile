@@ -15,6 +15,9 @@ require 'capistrano/figaro_yml'
 require 'capistrano/upload-config'
 require 'capistrano/puma/nginx'   # if you want to upload a nginx site template
 require 'capistrano/nginx'
+install_plugin Capistrano::Puma
+install_plugin Capistrano::Puma::Nginx
+
 require 'capistrano/rails/collection'
 
 require "capistrano/scm/git"
