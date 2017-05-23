@@ -1,3 +1,28 @@
+<div style="width: 100vw; height: 100vh; display: flex; justify-content: center; align-items: center;">
+  <form target="_blank" action="http://localhost:3000/paygate/new" method="GET" name="form_payment" id="form_payment">
+    <select class="form-control" name="paygate[amount]" id="amount">
+      <option disabled>선택하세요</option>
+      <option value="1000">1포인트 (1,000원)</option>
+      <option value="9500">10포인트 (9,500원)</option>
+      <option value="19000">20포인트 (19,000원)</option>
+      <option value="45000">50포인트 (45,000원)</option>
+      <option value="100000">월 무제한 (100,000원)</option>
+    </select>
+    <input type="text" name="paygate[user_key]" placeholder="user_key">
+    <input type="text" name="paygate[pg]" placeholder="pg">
+    <input type="text" name="paygate[pay_method]" placeholder="pay_method">
+    <input type="hidden" name="paygate[merchant_uid]" value="merchant">
+    <input type="hidden" name="paygate[product_name]" value="쿠니목소리4개">
+    <input type="hidden" name="paygate[buyer_name]" value="이한결">
+    <input type="hidden" name="paygate[buyer_tel]" value="010-3344-2809">
+    <input type="hidden" name="paygate[buyer_email]" value="test@cooni.com">
+    <input type="hidden" name="paygate[buyer_postcode]" value="44344">
+    <button id="paybutton" class="btn btn-login">결제하기</button>
+  </form>
+</div>
+
+<hr>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Astros</h1>
